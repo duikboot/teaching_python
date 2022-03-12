@@ -24,12 +24,12 @@ def main():
     counter = 1
     while True:
         answer = question()
-        correct, s = validate_quess(n, answer)
+        correct, reply = validate_quess(n, answer)
         if correct:
             print(f"You guessed it in {counter} guesses")
             break
         else:
-            print(s)
+            print(reply)
         counter += 1
 
 
