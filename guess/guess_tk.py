@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from tkinter import (
     Tk,
     Label,
@@ -73,7 +75,9 @@ class GuessingGame:
         if correct:
             self.guess_button.configure(state=DISABLED)
             self.reset_button.configure(state=NORMAL)
-            self.message = f"{self.message}, you guessed it in {self.num_guesses} guesses"
+            self.message = (
+                f"{self.message}, you guessed it in {self.num_guesses} guesses"
+            )
 
         self.label_text.set(self.message)
 
