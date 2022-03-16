@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 
-from tkinter import (
-    Tk,
-    Label,
-    Button,
-    Entry,
-    StringVar,
-    DISABLED,
-    NORMAL,
-    END,
-    W,
-    E)
+from tkinter import (DISABLED, END, NORMAL, Button, E, Entry, Label, StringVar,
+                     Tk, W)
 
 from guess_term import create_number, validate_quess
 
@@ -57,8 +48,7 @@ class GuessingGame:
             if 1 <= guess <= 100:
                 self.guess = guess
                 return True
-            else:
-                return False
+            return False
         except ValueError:
             return False
 
